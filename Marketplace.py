@@ -39,3 +39,30 @@ if tentativa >= 5:
 
 else:
   print(f"bem-vindo(a) {nome} ao Grupo Solares Marketplace")
+  login_feito = 1
+  
+# Daqui estarão as opções de onde ele pode ir
+
+sair_plataforma = 0
+
+while(login_feito == 1 and sair_plataforma == 0):
+ print(f"bem-vindo(a) {nome} ao Grupo Solares Marketplace")
+ print("------------------------------------------------------------")
+ print("Onde você gostaria de ir?")
+ print("1. ir no marketplace")
+ print("2. ir na area de calculo")
+ print("3. ir na area empresarial")
+ print("4. Sair da plataforma")
+
+ opcao_menu_inicial = int(input(""))
+ if(opcao_menu_inicial == 1):
+   print("Esse seguimenteo ainda não está disponivel, porfavor escolha outra opção")
+ elif(opcao_menu_inicial == 2):
+   print("Esse seguimenteo ainda não está disponivel, porfavor escolha outra opção")
+ elif(opcao_menu_inicial == 3):
+   print("Esse seguimenteo ainda não está disponivel, porfavor escolha outra opção")
+ elif(opcao_menu_inicial == 4):
+   print("Saindo da plataforma...")
+   sair_plataforma += 1
+ else:
+   print("Opção inválida, por favor escolha uma opção válida")
