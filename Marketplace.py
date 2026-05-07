@@ -1,6 +1,6 @@
 import math
 
-
+# Sessão de login
 print("Ola Seja bem-vindo ao Grupo Solares Marketplaced")
 nome = input("Qual é o seu nome?")
 print("")
@@ -38,14 +38,14 @@ if tentativa >= 5:
  print("Voce bateu o maximo de tentativa")
 
 else:
-  print(f"bem-vindo(a) {nome} ao Grupo Solares Marketplace")
   login_feito = 1
   
 # Daqui estarão as opções de onde ele pode ir
 
 sair_plataforma = 0
-
-while(login_feito == 1 and sair_plataforma == 0):
+habilitar_marketplace = 0
+# Sessão de menu inicial
+while(habilitar_marketplace == 0 and login_feito == 1 and sair_plataforma == 0):
  print(f"bem-vindo(a) {nome} ao Grupo Solares Marketplace")
  print("------------------------------------------------------------")
  print("Onde você gostaria de ir?")
@@ -56,13 +56,32 @@ while(login_feito == 1 and sair_plataforma == 0):
 
  opcao_menu_inicial = int(input(""))
  if(opcao_menu_inicial == 1):
-   print("Esse seguimenteo ainda não está disponivel, porfavor escolha outra opção")
+   habilitar_marketplace += 1
+
  elif(opcao_menu_inicial == 2):
    print("Esse seguimenteo ainda não está disponivel, porfavor escolha outra opção")
+
  elif(opcao_menu_inicial == 3):
+   
    print("Esse seguimenteo ainda não está disponivel, porfavor escolha outra opção")
  elif(opcao_menu_inicial == 4):
+   
    print("Saindo da plataforma...")
    sair_plataforma += 1
+
  else:
    print("Opção inválida, por favor escolha uma opção válida")
+
+empresas = [1, 2, 3, 4, 5]
+
+# Sessão de marketplace menu
+while(habilitar_marketplace == 1 and login_feito == 1 and sair_plataforma == 0):
+
+  print("Aqui estão as empresas operando no marketplace")
+  print(empresas[0],empresas[1], empresas[2], empresas[3], empresas[4])
+  print("1. Voltar para o menu inicial?")
+
+  opcao_menu_marketplace = int(input(""))
+
+  if(opcao_menu_marketplace == 1):
+    habilitar_marketplace -= 1
