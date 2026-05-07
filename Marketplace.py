@@ -42,8 +42,10 @@ else:
   
 # Daqui estarão as opções de onde ele pode ir
 
+empresas = [1, 2, 3, 4, 5]
 sair_plataforma = 0
 habilitar_marketplace = 0
+
 # Sessão de menu inicial
 while(habilitar_marketplace == 0 and login_feito == 1 and sair_plataforma == 0):
  print(f"bem-vindo(a) {nome} ao Grupo Solares Marketplace")
@@ -72,7 +74,6 @@ while(habilitar_marketplace == 0 and login_feito == 1 and sair_plataforma == 0):
  else:
    print("Opção inválida, por favor escolha uma opção válida")
 
-empresas = [1, 2, 3, 4, 5]
 
 # Sessão de marketplace menu
 while(habilitar_marketplace == 1 and login_feito == 1 and sair_plataforma == 0):
@@ -85,3 +86,5 @@ while(habilitar_marketplace == 1 and login_feito == 1 and sair_plataforma == 0):
 
   if(opcao_menu_marketplace == 1):
     habilitar_marketplace -= 1
+
+# bom dia
