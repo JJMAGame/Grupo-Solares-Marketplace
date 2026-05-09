@@ -1,4 +1,5 @@
 import math
+import empresas
 
 # Sessão de login
 print("Ola Seja bem-vindo ao Grupo Solares Marketplaced")
@@ -42,7 +43,6 @@ else:
   
 # Daqui estarão as opções de onde ele pode ir
 
-empresas = [1, 2, 3, 4, 5]
 sair_plataforma = 0
 habilitar_marketplace = 0
 
@@ -79,7 +79,7 @@ while(habilitar_marketplace == 0 and login_feito == 1 and sair_plataforma == 0):
 while(habilitar_marketplace == 1 and login_feito == 1 and sair_plataforma == 0):
 
   print("Aqui estão as empresas operando no marketplace")
-  print(empresas[0],empresas[1], empresas[2], empresas[3], empresas[4])
+  print(empresas.empresas[0],empresas.empresas[1], empresas.empresas[2], empresas.empresas[3], empresas.empresas[4])
   print("1. Voltar para o menu inicial?")
 
   opcao_menu_marketplace = int(input(""))
