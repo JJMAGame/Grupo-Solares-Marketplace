@@ -86,3 +86,5 @@ while(habilitar_marketplace == 1 and login_feito == 1 and sair_plataforma == 0):
 
   if(opcao_menu_marketplace == 1):
     habilitar_marketplace -= 1
+
+# bom dia
