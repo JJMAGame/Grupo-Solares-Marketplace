@@ -1,4 +1,7 @@
-empresas = ["Empresa 1", "Empresa 2", "Empresa 3", "Empresa 4", "Empresa 5"]
+def empresas ():
+  empresas = ["Empresa A", "Empresa B", "Empresa C", "Empresa D", "Empresa E"]
+  return empresas
+  
 
 # TESTE TESTE E MAIS TESTE
 # empresas_existentes = print(
