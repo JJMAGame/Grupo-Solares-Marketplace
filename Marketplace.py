@@ -1,5 +1,6 @@
 import math
 import empresas # Nota importante - para acessar a lista de empresas, é necessário importar o arquivo empresas.py, onde a lista de empresas está definida. Certifique-se de que o arquivo empresas.py esteja no mesmo diretório do arquivo Marketplace.py para que a importação funcione corretamente.
+import cadastro
 
 # Sessão de login
 print("Ola Seja bem-vindo ao Grupo Solares Marketplaced")
