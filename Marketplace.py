@@ -6,17 +6,17 @@ import cadastro
 # Sessão de login
 login_feito = 0
 user_found = False
+# opção_login
 
 print("Bem-vindo ao Grupo Solares Marketplace!")
 print("------------------------------------------------------------")
 print("Qual é sua forma de login?")
 print("1. Faça login de usuario")
-print("2. Faça login de empresa")
-print("3. Cadastre-se")
+print("2. Cadastre-se")
 
-opção_login = int(input(""))
+login_validação = int(input(""))
 
-if(opção_login == 1):
+if(login_validação == 1):
     email = input("Email: ")
     senha = input("Senha: ")
 
@@ -28,6 +28,18 @@ if(opção_login == 1):
              if email == linha[2] and senha == linha[3]:
                 user_found = True
                 print("Login de usuario bem-sucedido!")
+                login_feito += 1
+             elif user_found == False:
+                print("Email ou senha incorretos, por favor tente novamente.")
+elif(login_validação == 2):
+  with open("cadastro/empresas.csv", "a", encoding="utf-8") as file:
+        leitor = csv.reader(file, delimiter=';')
+        next(leitor)
+
+        for linha in leitor:
+             if email == linha[3] and senha == linha[4]:
+                user_found = True
+                print("Login de empresa bem-sucedido!")
                 login_feito += 1
              elif user_found == False:
                 print("Email ou senha incorretos, por favor tente novamente.")
