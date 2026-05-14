@@ -36,13 +36,7 @@ elif(login_validação == 2):
         leitor = csv.reader(file, delimiter=';')
         next(leitor)
 
-        for linha in leitor:
-             if email == linha[3] and senha == linha[4]:
-                user_found = True
-                print("Login de empresa bem-sucedido!")
-                login_feito += 1
-             elif user_found == False:
-                print("Email ou senha incorretos, por favor tente novamente.")
+        # for linha in leitor:
                 
 
 # Daqui estarão as opções de onde ele pode ir
