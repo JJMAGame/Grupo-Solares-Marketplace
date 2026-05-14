@@ -7,9 +7,9 @@ print("3. ver os dados de empresas")
 print("4. Finalizar visualizador")
 
 opcao_visualizador = int(input(""))
-sair_visualizador = 1
+sair_visualizador = 0
 
-while(sair_visualizador != 1):
+while(sair_visualizador == 0):
  if(opcao_visualizador == 1):
   with open("cadastro/usuarios.csv", "r") as file:
     leitor = csv.reader(file, delimiter=';')
@@ -35,7 +35,7 @@ while(sair_visualizador != 1):
   opcao_visualizador = int(input(""))
 
  elif(opcao_visualizador == 4):
-  sair_visualizador -= 1
+  sair_visualizador += 1
 
  else:
   print("Opção inválida, por favor escolha uma opção válida")
