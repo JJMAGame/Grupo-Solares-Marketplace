@@ -37,13 +37,34 @@ elif(login_validação == 2):
       nome = input(f"Qual é o seu nome completo?\n ")
       email = input(f"Qual é o seu email? \n ")
       senha = input("Crie uma senha: \n ")
-      CEP =  int(input(f"Qual é o seu CEP? "))
+      CEP =  input(f"Qual é o seu CEP? ")
       numero = input(f"qual é o seu numero de telefone? \n ")
 
-  with open("cadastro/usuarios.csv", "a", encoding="utf-8") as file:
+      with open("cadastro/usuarios.csv", "r", encoding="utf-8") as file:
         leitor = csv.reader(file, delimiter=';')
         next(leitor)
-       
+        for linha in leitor:
+            if email == linha[2]:
+              print("Esse email ja foi cadastrado, por favor tente novamente com outro email.")
+              break
+            else:
+              try:
+               proximo_id = 1
+               with open("cadastro/usuarios.csv", "r", encoding="utf-8", newline='') as file:
+                   leitor = csv.reader(file, delimiter=';')
+                   next(leitor)
+                   linhas = list(leitor)
+                   if linhas and len(linhas) > 0 and linhas[-1] and len(linhas[-1]) > 0:
+                     ultimo_id = int(linhas[-1][0])
+                     proximo_id = ultimo_id + 1
+              except (FileNotFoundError, IndexError, ValueError):
+                proximo_id = 1
+
+              with open("cadastro/usuarios.csv", "a", encoding="utf-8", newline='') as file:
+                escritor = csv.writer(file, delimiter=';')
+                escritor.writerow([proximo_id, nome, email, senha, CEP, numero])
+                print("Cadastro realizado com sucesso!")
+                login_feito += 1
 
         # for linha in leitor:
                 
