@@ -32,9 +32,18 @@ if(login_validação == 1):
              elif user_found == False:
                 print("Email ou senha incorretos, por favor tente novamente.")
 elif(login_validação == 2):
-  with open("cadastro/empresas.csv", "a", encoding="utf-8") as file:
+      print("Vamoas começar o processo de cadastro!")
+
+      nome = input(f"Qual é o seu nome completo?\n ")
+      email = input(f"Qual é o seu email? \n ")
+      senha = input("Crie uma senha: \n ")
+      CEP =  int(input(f"Qual é o seu CEP? "))
+      numero = input(f"qual é o seu numero de telefone? \n ")
+
+  with open("cadastro/usuarios.csv", "a", encoding="utf-8") as file:
         leitor = csv.reader(file, delimiter=';')
         next(leitor)
+       
 
         # for linha in leitor:
                 
