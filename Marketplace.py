@@ -86,7 +86,8 @@ while(habilitar_marketplace == 0 and login_feito == 1 and sair_plataforma == 0):
  print("1. ir no marketplace")
  print("2. ir na area de calculo")
  print("3. ir na area empresarial")
- print("4. Sair da plataforma")
+ print("4. Mostrar perfil")
+ print("5. Sair da plataforma")
 
  opcao_menu_inicial = int(input(""))
  if(opcao_menu_inicial == 1):
@@ -135,4 +136,4 @@ while(habilitar_marketplace != 0 and login_feito == 1 and sair_plataforma == 0):
      print("3. ir na area empresarial")
      print("4. Sair da plataforma")
 
-     opcao_menu_inicial = int(input(""))
+     opcao_menu_inicial
