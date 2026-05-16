@@ -43,11 +43,15 @@ elif(login_validação == 2):
       with open("cadastro/usuarios.csv", "r", encoding="utf-8") as file:
         leitor = csv.reader(file, delimiter=';')
         next(leitor)
+        
+        email_existe = False
         for linha in leitor:
-            if email == linha[2]:
+            if linha and len(linha) > 3:  # Verifica se a linha tem pelo menos 4 elementos
+             if email == linha[2]:
               print("Esse email ja foi cadastrado, por favor tente novamente com outro email.")
+              email_existe = True
               break
-            else:
+             else:
               try:
                proximo_id = 1
                with open("cadastro/usuarios.csv", "r", encoding="utf-8", newline='') as file:
@@ -64,7 +68,7 @@ elif(login_validação == 2):
                 escritor = csv.writer(file, delimiter=';')
                 escritor.writerow([proximo_id, nome, email, senha, CEP, numero])
                 print("Cadastro realizado com sucesso!")
-                login_feito += 1
+                login_validação -= 1
 
         # for linha in leitor:
                 
