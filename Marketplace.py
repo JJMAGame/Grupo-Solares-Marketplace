@@ -136,4 +136,6 @@ while(habilitar_marketplace != 0 and login_feito == 1 and sair_plataforma == 0):
      print("3. ir na area empresarial")
      print("4. Sair da plataforma")
 
+     opcao_menu_inicial = int(input(""))
+
      opcao_menu_inicial
